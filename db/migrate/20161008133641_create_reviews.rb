@@ -1,6 +1,6 @@
-class CreateOtzivs < ActiveRecord::Migration
+class CreateReviews < ActiveRecord::Migration
   def change
-    create_table :otzivs do |t|
+    create_table :reviews do |t|
       t.string :author
       t.text :text
 
