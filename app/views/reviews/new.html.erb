@@ -1,0 +1,27 @@
+<h1>Отзывы</h1>
+
+<%= form_for :review, url: reviews_path do |f| %>
+  
+  <% if @review && @review.errors.any? %>
+    <p>
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>  
+        </ul>
+    </p>
+  <% end %>
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_area :text %><br />
+  </p>
+
+  <p>
+    <%= f.submit 'отправить' %>
+  </p>
+<% end %>
