@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   get '/' => 'home#index'
-
-resource :articles, only: [:new, :create], path_names: {:new => ''}
- resource :reviews, only: [:new, :create], path_names: {:new => ''}
+resources :articles
+# resource :reviews, only: [:new, :create], path_names: {:new => ''}
   resource :contacts, only: [:new, :create], path_names: {:new => ''}
 
   # The priority is based upon order of creation: first created -> highest priority.
