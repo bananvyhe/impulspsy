@@ -3,12 +3,12 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    if @review.valid?
-      @review.save
-    else
-      render action: 'new'
-    end
+        @review = Review.new(review_params)
+        if @review.valid?
+          @review.save
+          else
+          render action: 'new'
+        end
   end
 
   private 
