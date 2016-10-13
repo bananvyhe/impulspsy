@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get '/' => 'home#index'
+
+resources :reviews
 resources :articles
 # resource :reviews, only: [:new, :create], path_names: {:new => ''}
   resource :contacts, only: [:new, :create], path_names: {:new => ''}
