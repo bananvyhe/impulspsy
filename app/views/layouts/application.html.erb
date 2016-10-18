@@ -10,7 +10,7 @@
 
 <% if user_signed_in? %>
 
-Логин: <%= current_user.username %> <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
+Здравствуйте, <%= current_user.username %> <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
 
 <% else %>
 
