@@ -35,9 +35,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem "rspec-rails", "~> 2.4"
+  gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
   gem 'byebug'
+  gem 'shoulda-matchers', '~> 3.1'
+  
 end
 
 group :development do
