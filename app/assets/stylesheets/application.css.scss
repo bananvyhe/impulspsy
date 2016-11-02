@@ -1,2 +1,64 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+
+body {background-image: url("SW-028.jpg"); 
+
+	background-repeat: no-repeat;
+	
+	background-position: center 0;
+}
+.backsky{
+	
+}
+.headsky { 
+	height: 160px;
+}
+
+
+.logo {
+	text-align: center;
+}
+.tagline {
+	color: #602F8D;
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 1.5em;
+	text-align: center;
+	padding-top: 1em;
+}
+
+/* footer styling for all resolutions */
+
+.siteinfo {
+	text-align: center;
+	padding: 3em 0;
+	border-top: 1px solid #ddd;
+}
+.siteinfo a {
+	text-decoration: none;
+	color: #999;
+	font-size: 0.8em;
+}
+.siteinfo a:hover {
+	color: #602F8D;
+	text-decoration: underline;
+}
+
+/* Small devices (tablets, 768px and up) 
+
+Greater than 768 px, push logo left and tagline right. Alter 
+tagline font size, alignment, and padding for larger dimensions.
+
+*/
+@media (min-width: 768px) {  
+	.logo {
+		text-align: left;
+	}
+	.tagline {
+		font-size: 2em;
+		text-align: right;
+		padding-top: 1.6em;
+	}
+}

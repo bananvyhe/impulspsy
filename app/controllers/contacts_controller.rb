@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
 	def new
-
+		@mark = 3
 	end
 
 	def create

@@ -1,4 +1,10 @@
 class ReviewsController < ApplicationController
+
+  def index
+
+    @mark = 2
+  end
+
   def new
   end
 
