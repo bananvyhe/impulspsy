@@ -35,6 +35,20 @@
 		        <li>
 				 <% end %>
 		        <a href="/">Главная</a></li>
+
+		        <% if @mark == 4 %>
+		        <li class ='active'> 
+		        <% else %>
+		        <li>
+				<% end %>
+		        <a href="/employees">Специалисты</a></li>
+
+		        <% if @mark == 5 %>
+		        <li class ='active'> 
+		        <% else %>
+		        <li>
+				<% end %>
+		        <a href="/costs">Стоимость</a></li>
 		      
 		        <% if @mark == 2 %>
 		        <li class ='active'> 
@@ -43,12 +57,24 @@
 				 <% end %>
 		        <a href="/reviews">Отзывы</a></li>
 
+		        <% if @mark == 6 %>
+		        <li class ='active'> 
+		        <% else %>
+		        <li>
+				<% end %>
+		        <a href="/libraries">Библиотека</a></li>
+
 		        <% if @mark == 3 %>
 		        <li class ='active'> 
 		        <% else %>
 		        <li>
 				<% end %>
 		        <a href="/contacts">Контакты</a></li>
+
+		        
+
+		        
+
 
 		      </ul>
 		    </div><!-- end navbar-collapse -->
