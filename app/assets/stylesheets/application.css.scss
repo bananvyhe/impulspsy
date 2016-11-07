@@ -19,7 +19,7 @@ body {background-image: url("SW-028.jpg");
 
 .logo {
 	text-align: center;
-}
+} 
 .tagline {
 	color: #602F8D;
 	font-family: Georgia, serif;
@@ -61,4 +61,24 @@ tagline font size, alignment, and padding for larger dimensions.
 		text-align: right;
 		padding-top: 1.6em;
 	}
+}
+
+
+
+
+.head_block {
+	height: 160px;
+}
+
+.header_separator {
+background-image: url("grass.jpg");
+background-position: 0 0;
+background-repeat: repeat-x;
+border-bottom: 1px solid #e8e8e8;
+float: none;
+height: 48px;
+margin-bottom: -1px;
+margin-left: auto;
+margin-right: auto;
+ 
 }
