@@ -66,9 +66,50 @@ tagline font size, alignment, and padding for larger dimensions.
 
 
 
-.head_block {
-	height: 160px;
+.head_block { background-color: #444;
+	background-image: url("logo21.png");
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 155px;
+
 }
+ 
+
+.addressline { background-color: #222; 
+	color:#555; 
+	font: 13px Arial, Helvetica, sans-serif;
+	  
+	font-weight:bold;
+}
+
+.address { text-align: right;
+}
+
+.contacts {  background-color: #888;  border-left: 1px solid #aaa;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+
+.rightplace  {  
+
+}
+
+
+.top_info_list {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.textwidget { background-color: #666;
+	float: right;
+}
+ 
+#right_place {
+	float: right;
+} 
+#right_place .col-md-6 {
+	Padding-top:70px;
+}
+
 
 .header_separator {
 background-image: url("grass.jpg");
