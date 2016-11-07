@@ -63,10 +63,14 @@ tagline font size, alignment, and padding for larger dimensions.
 	}
 }
 
+.blank {height: 80px;
 
+}
+.addressblank {height: 20px;
 
+}
 
-.head_block { background-color: #444;
+.head_block { /* background-color: #444; */
 	background-image: url("logo21.png");
 	background-repeat: no-repeat;
 	background-position: left;
@@ -75,21 +79,21 @@ tagline font size, alignment, and padding for larger dimensions.
 }
  
 
-.addressline { background-color: #222; 
+.addressline { /* background-color: #222; */ 
 	color:#555; 
-	font: 13px Arial, Helvetica, sans-serif;
+	font: 14px Arial, Helvetica, sans-serif;
 	  
-	font-weight:bold;
+	
+}
+ 
+.address { text-align: right; 
 }
 
-.address { text-align: right;
+.contacts {  /* background-color: #888; */  border-left: 1px solid #aaa;
+	font: 14px Arial, Helvetica, sans-serif;
 }
 
-.contacts {  background-color: #888;  border-left: 1px solid #aaa;
-	font: 13px Arial, Helvetica, sans-serif;
-}
-
-.rightplace  {  
+.rightplace   {   
 
 }
 
@@ -106,9 +110,7 @@ tagline font size, alignment, and padding for larger dimensions.
 #right_place {
 	float: right;
 } 
-#right_place .col-md-6 {
-	Padding-top:70px;
-}
+
 
 
 .header_separator {
