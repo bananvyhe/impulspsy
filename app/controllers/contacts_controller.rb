@@ -3,6 +3,8 @@ class ContactsController < ApplicationController
 		@mark = 3
 	end
 
+	
+
 	def create
 		@contact = Contact.new(contact_params)
 		if @contact.valid?

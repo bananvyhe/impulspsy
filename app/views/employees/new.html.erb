@@ -1,19 +1,27 @@
-<h1>Свяжитесь с нами</h1>
+<h4>Добавить специалиста:</h1>
 
 <%= form_for :employee, url: employees_path do |f| %>
 	
 	<% if @employee && @employee.errors.any? %>
 		<p>
-        <ul>
+	        <ul>
 
-		<% @employee.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>  
+			<% @employee.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	        <% end %>  
 
-        </ul>
+	        </ul>
 		</p>
 	<% end %>
 
+
+  
+ 	<p>
+    <label>My Avatar</label>
+    <%= image_tag @employee.avatar.url if @employee.avatar? %>  
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %> 
+ 
  	<p>
 		<%= f.label :img %><br />
 		<%= f.text_field :img %>

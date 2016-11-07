@@ -7,6 +7,7 @@ class EmployeesController < ApplicationController
 
 	def new
 		@mark = 4
+		 @employee = Employee.new
 	end
 
 	def show
@@ -14,9 +15,11 @@ class EmployeesController < ApplicationController
 	end
 
 	def create
-		@employee = employee.new(employee_params)
+		@employee = Employee.new(employee_params)
+		@employee.avatar = params[:file]
 		if @employee.valid?
-			@employee.save
+			 
+			@employee.save!
 		else
 			render action: 'new'
 		end
@@ -24,6 +27,6 @@ class EmployeesController < ApplicationController
 
 	private	
 		def employee_params
-			params.require(:employee).permit(:email, :message)
+			params.require(:employee).permit(:avatar, :name, :spec, :education, :addeducation, :programms)
 		end
 end
