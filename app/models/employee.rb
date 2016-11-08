@@ -5,6 +5,9 @@ class Employee < ActiveRecord::Base
 	validates :addeducation, presence:true
 	validates :programms, presence:true
 	validates :avatar, presence: true
+	validates :prof, presence: true
+	 
+	
 
 	mount_uploader :avatar, AvatarUploader
 end
