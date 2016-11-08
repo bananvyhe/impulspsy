@@ -1,4 +1,4 @@
-<h4>Добавить специалиста:</h1>
+<h4>Добавить специалиста:</h4>
 
 <%= form_for @employee, :html => {:multipart => true} do |f| %>
 	
@@ -21,6 +21,7 @@
     <%= image_tag (@employee.avatar.url) if @employee.avatar.file.nil? %>  
     <%= f.file_field :avatar %>
     <%= f.hidden_field :avatar_cache %> 
+     
  	</p>
  	 
 

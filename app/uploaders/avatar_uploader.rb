@@ -2,7 +2,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -23,16 +23,41 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process scale: [200, 300]
+  #process scale: [200, 300]
   #
   # def scale(width, height)
   #   # do something
   # end
 
   # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process resize_to_fit: [50, 50]
-  # end
+  version :big do
+    process :resize_to_fit => [400, 600]
+  end
+
+  version :medium do
+    process :resize_to_fit => [200, 300]
+  end
+
+  version :thumb do
+   process resize_to_fit: [50, 50]
+  end
+
+  def round_corner(radius = 10)
+    round_command = ""
+    round_command << '\( +clone -alpha extract '
+    round_command << "-draw 'fill black polygon 0,0 0,#{radius} #{radius},0 fill white circle #{radius},#{radius} #{radius},0' "
+    round_command << '\( +clone -flip \) -compose Multiply -composite '
+    round_command << '\( +clone -flop \) -compose Multiply -composite \) '
+    round_command << '-alpha off -compose CopyOpacity -composite'
+    manipulate! do |image|
+      image.format 'png'
+      image.combine_options :convert do |command|
+  command << shadow_command
+      end
+
+    image
+  end
+end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

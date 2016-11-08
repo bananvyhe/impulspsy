@@ -1,4 +1,4 @@
-<h1>Редактирование статьи</h1>
+<h4>Редактирование статьи:</h4>
 
 <%= form_for :employee, url: employee_path(@employee), method: :put do |f| %>
 	
@@ -19,7 +19,7 @@
     <%= f.file_field :avatar %>
     <%= f.hidden_field :avatar_cache %> 
  	</p>
- 	
+
   <p>
 		<label>Ф.И.О.:</label><br />
 		<%= f.text_field :name %>

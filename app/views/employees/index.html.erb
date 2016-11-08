@@ -1,5 +1,8 @@
 <h4>Список специалистов:</h4>
 <% @employees.each do |employee| %>
+<%= image_tag employee.avatar.thumb.url %>
+<%= image_tag employee.avatar.medium.url %>
+<%= image_tag employee.avatar.big.url %>
 	<h2><%= employee.name %></h2>
 	<p><%= employee.prof %></p>
 
