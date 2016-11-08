@@ -39,25 +39,29 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-   process resize_to_fit: [50, 50]
+   # 
+   process :make_thumb
   end
 
-  def round_corner(radius = 10)
-    round_command = ""
-    round_command << '\( +clone -alpha extract '
-    round_command << "-draw 'fill black polygon 0,0 0,#{radius} #{radius},0 fill white circle #{radius},#{radius} #{radius},0' "
-    round_command << '\( +clone -flip \) -compose Multiply -composite '
-    round_command << '\( +clone -flop \) -compose Multiply -composite \) '
-    round_command << '-alpha off -compose CopyOpacity -composite'
-    manipulate! do |image|
-      image.format 'png'
-      image.combine_options :convert do |command|
-  command << shadow_command
-      end
-
-    image
+  # merge "mask 'n' paint" images with a gray image,
+  # to create a "lighting mask"
+  def make_thumb
+     
+    resize_to_fit(80,80)
+     
+manipulate! do |image|
+    image.combine_options do |c|
+      c.mattecolor '#555555'  
+      c.frame  '1x1' 
+       
+    end
+    
+    image   
   end
-end
+  end
+
+
+  
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
