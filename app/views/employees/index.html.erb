@@ -1,4 +1,12 @@
-<h1><%= @employee.name %></h1>
+<h4>Список специалистов:</h4>
+<% @employees.each do |employee| %>
+	<h2><%= employee.name %></h2>
+	<p><%= employee.prof %></p>
+
 <p>
-	 
+	<%= link_to 'Показать', employee_path(employee) %> |
+	<%= link_to 'Редактировать', edit_employee_path(employee) %> |
+	<%= link_to 'Удалить', employee_path(employee), method: :delete, data: { confirm: 'Вы уверены?'} %>
 </p>
+<hr>
+<% end %>

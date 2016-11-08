@@ -2,7 +2,7 @@ class EmployeesController < ApplicationController
 	
 	def index
 		@mark = 4
-		@employee = Employee.all
+		@employees = Employee.all
 	end
 
 	def new
@@ -24,6 +24,25 @@ class EmployeesController < ApplicationController
 			render action: 'new'
 		end
 	end
+
+	def edit
+		@employee = Employee.find(params[:id])
+  	end
+
+  	def update
+		@employee = Employee.find(params[:id])
+		if @employee.update(employee_params)
+        redirect_to @employee
+        else
+          render action: 'edit'
+    	end
+  	end
+
+  	def destroy
+		@employee = Employee.find(params[:id])
+		@employee.destroy
+		redirect_to action: :index
+  	end
 
 	private	
 		def employee_params
