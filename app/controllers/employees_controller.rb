@@ -3,6 +3,7 @@ class EmployeesController < ApplicationController
 	def index
 		@mark = 4
 		@employees = Employee.all
+
 	end
 
 	def new
@@ -39,7 +40,9 @@ class EmployeesController < ApplicationController
   	end
 
   	def destroy
-		@employee = Employee.find(params[:id])
+  		@employee = Employee.find(params[:id])
+  		@employee.remove_avatar!
+  		@employee.save
 		@employee.destroy
 		redirect_to action: :index
   	end
