@@ -1,11 +1,12 @@
-<h4>Список специалистов:</h4><p><a href="/employees/new">new</a></li></p>
+<h4>Список специалистов:</h4><p><a href="/employees/new">new</a> 
 <% @employees.each do |employee| %>
-<%= image_tag employee.avatar.thumb.url %>
+ <div>
 <%= image_tag employee.avatar.medium.url %>
-<%= image_tag employee.avatar.big.url %>
+ 
 	<h2><%= employee.name %></h2>
 	<p><%= employee.prof %></p>
-
+</div>
+<div>
 <p>
 	<%= link_to 'Показать', employee_path(employee) %> |
 	<%= link_to 'Редактировать', edit_employee_path(employee) %> |
@@ -15,5 +16,6 @@
 
 
 </p>
+</div>
 <hr>
 <% end %>

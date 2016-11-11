@@ -1,11 +1,9 @@
-
-
 <h4>Добавить специалиста:</h4>
 
 
 <%= form_for @employee, :html => {:multipart => true} do |f| %>
-	<div class="col-xs-12 col-sm-6 col-md-6"
-	
+	<div class="col-xs-12 col-sm-6 col-md-6 ">
+		<div >
 		<% if @employee && @employee.errors.any? %>
 			<p>
 		        <ul>
@@ -17,28 +15,29 @@
 		        </ul>
 			</p>
 		<% end %>
+		</div>
 
-
-  
+  		<div  >
 	 	<p>
 	    <label>Загрузите фото:</label>
-	    <%= image_tag (@employee.avatar.url) if @employee.avatar.file.nil? %> 
-
 	    <%= f.file_field :avatar %>
 	    <%= f.hidden_field :avatar_cache %> 
 	     
 	 	</p>
- 	 
-
+ 	 	</div>
+		
+		<div  >
 		<p>
 			<label>Ф.И.О.:</label><br />
 			<%= f.text_field :name %>
 		</p>
+
 	
 		<p>
 			<label>Деятельность:</label><br /> 
 			<%= f.text_area :prof, id: "froala-editor"   %>
 		</p>
+		</div>
 	</div>
 
 	<div class="col-xs-12 col-sm-6 col-md-6">
@@ -85,17 +84,26 @@
     })
   });
 </script> -->
- <script src='../../node_modules/froala-editor/languages/ru.js'></script>
+ 
 <script>
   $(function() {
     $('textarea#froala-editor').froalaEditor({
     	language: 'ru',
+    	theme: 'gray',
+    	zIndex: 2001,
     	placeholderText: 'Start typing something...',
     	tabSpaces: 4,
     	
     	pluginsEnabled: null,
     	 heightMin: 100,
-      heightMax: 200
+      heightMax: 200,
+
+      toolbarButtons: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline','formatOL', 'formatUL', 'outdent', 'indent'],
+      toolbarButtonsMD: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline','formatOL', 'formatUL', 'outdent', 'indent'],
+      toolbarButtonsSM: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline', 'outdent', 'indent','formatOL', 'formatUL'],
+      toolbarButtonsXS: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline', 'outdent', 'indent','formatOL', 'formatUL']
+      
+
 	}
 	
 		

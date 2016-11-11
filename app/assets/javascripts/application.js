@@ -19,3 +19,6 @@
 //= require froala_editor.min.js
 //
  //= require languages/ru.js
+
+//= require plugins/entities.min.js
+//= require plugins/lists.min.js
