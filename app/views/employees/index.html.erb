@@ -1,7 +1,62 @@
 <h4>Список специалистов:</h4><p><a href="/employees/new">new</a> 
 <% @employees.each do |employee| %>
- <div>
-<%= image_tag employee.avatar.medium.url %>
+<!-- <div class="col-lg-4 col-md-4 col-sm-6  "> -->
+								
+																<!-- Team Member  
+								<div class="team-member" style="opacity: 1;">
+									
+									<img class="team-member-image" src="img/team/8.jpg" alt="">
+									
+									<div class="team-member-info">
+										
+										<h2>Alan Smith</h2>
+										<span class="job">Vice President of the United States</span>
+										
+										<div class="team-member-more">
+											<p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus.</p><p>Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet.</p>
+											<div class="social-media">
+												<span class="small-caption">Get connected:</span>
+												
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+								/Team Member -->	
+
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								
+																<!-- Team Member -->
+								<div class="team-member" style="opacity: 1;">
+									
+									<%= image_tag employee.avatar.medium.url   %>
+									<!-- <img class="team-member-image" src="img/team/4.jpg" alt=""> -->
+									
+									<div class="team-member-info">
+										
+										<h4><%= employee.name %></h4>
+										<span class="job"><%= employee.spec %></span>
+										
+										<div class="team-member-more">
+											<%= employee.prof %>
+											<%= link_to 'Редактировать', edit_employee_path(employee) %>
+											<!-- <div class="social-media">
+												<span class="small-caption">Get connected:</span>
+												 
+											</div> -->
+										</div>
+										
+									</div>
+									
+								</div>
+								<!-- /Team Member -->							
+							</div>							
+							
+
+<!--  <div>
+
+<%= image_tag employee.avatar.medium.url    %>
  
 	<h2><%= employee.name %></h2>
 	<p><%= employee.prof %></p>
@@ -17,5 +72,5 @@
 
 </p>
 </div>
-<hr>
-<% end %>
+<hr>-->
+<% end %> 

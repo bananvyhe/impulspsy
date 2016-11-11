@@ -9,6 +9,118 @@
 @import "bootstrap";
 
 
+/* Team Members */
+
+.team-member{
+	position:relative;
+	overflow:hidden;
+	padding-bottom:89px;
+	margin-bottom:30px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+}
+
+.team-member .team-member-image{
+	width:100%;
+}
+
+.team-member-info{
+	padding:20px;
+	position:absolute;
+	z-index:10;
+	margin-top:-89px;
+	top:100%;
+	left:0;
+	background:#fff;
+	right:0;
+	bottom:0;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	backface-visibility: hidden;
+}
+
+.team-member .social-media li{
+	margin-right:4px;
+}
+
+.team-member .social-media li:last-child{
+	margin-right:0;
+}
+
+.team-member-more{
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	transition: all .4s ease 0.1s;
+	-webkit-transition: all .4s ease 0.1s;
+	-moz-transition: all .4s ease 0.1s;
+}	
+
+.team-member:hover .team-member-info{
+	top:80px;
+}
+
+.team-member:hover .team-member-more{
+	opacity:1;
+	-moz-opacity:1;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+}
+
+.team-member-info{
+	 
+}
+
+.team-member-info h2{
+	margin:3px 0 0;
+}
+
+.team-member-info .job{
+	color:#95999e;
+	font-size:13px;
+	display:block;
+	margin-bottom:17px;
+	white-space:nowrap;
+}
+
+.team-member.big{
+	background:#fff;
+	padding:0;
+}
+
+.team-member.big .team-member-image{
+	width:50%;
+	padding-right:15px;
+	float:left;
+}
+
+.team-member.big .team-member-info{
+	position:relative;
+	margin-top:0;
+	top:0;
+	float:left;
+	width:50%;
+	padding:30px 30px 30px 15px;
+}
+
+.team-member.big .team-member-more{
+	opacity:1;
+	-moz-opacity:1;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+}
+.small-caption + .social-icons{
+	margin-top:3px;
+}
+
+
 
 body {background-image: url("SW-028.jpg"); 
 

@@ -22,3 +22,4 @@
 
 //= require plugins/entities.min.js
 //= require plugins/lists.min.js
+ 
