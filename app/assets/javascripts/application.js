@@ -18,3 +18,4 @@
 //
 //= require froala_editor.min.js
 //
+ //= require languages/ru.js
