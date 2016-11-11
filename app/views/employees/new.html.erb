@@ -1,62 +1,106 @@
+
+
 <h4>Добавить специалиста:</h4>
 
+
 <%= form_for @employee, :html => {:multipart => true} do |f| %>
+	<div class="col-xs-12 col-sm-6 col-md-6"
 	
-	<% if @employee && @employee.errors.any? %>
-		<p>
-	        <ul>
+		<% if @employee && @employee.errors.any? %>
+			<p>
+		        <ul>
 
-			<% @employee.errors.full_messages.each do |msg| %>
-	          <li><%= msg %></li>
-	        <% end %>  
+				<% @employee.errors.full_messages.each do |msg| %>
+		          <li><%= msg %></li>
+		        <% end %>  
 
-	        </ul>
-		</p>
-	<% end %>
+		        </ul>
+			</p>
+		<% end %>
 
 
   
- 	<p>
-    <label>Фото:</label>
-    <%= image_tag (@employee.avatar.url) if @employee.avatar.file.nil? %>  
-    <%= f.file_field :avatar %>
-    <%= f.hidden_field :avatar_cache %> 
-     
- 	</p>
+	 	<p>
+	    <label>Загрузите фото:</label>
+	    <%= image_tag (@employee.avatar.url) if @employee.avatar.file.nil? %> 
+
+	    <%= f.file_field :avatar %>
+	    <%= f.hidden_field :avatar_cache %> 
+	     
+	 	</p>
  	 
 
-	<p>
-		<label>Ф.И.О.:</label><br />
-		<%= f.text_field :name %>
-	</p>
+		<p>
+			<label>Ф.И.О.:</label><br />
+			<%= f.text_field :name %>
+		</p>
+	
+		<p>
+			<label>Деятельность:</label><br /> 
+			<%= f.text_area :prof, id: "froala-editor"   %>
+		</p>
+	</div>
 
-	<p>
-		<label>Деятельность:</label><br /> 
-		<%= f.text_area :prof %>
-	</p>
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<p>
+			<label>Специальность:</label><br />
+			<%= f.text_area  :spec, id: "froala-editor" %>
+		</p>
+	</div>
 
-	<p>
-		<label>Специальность:</label><br />
-		<%= f.text_area  :spec %>
-	</p>
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<p>
+			<label>Образование:</label><br />
+			<%= f.text_area  :education, id: "froala-editor"  %>
+		</p>
+	</div>
 
-	<p>
-		<label>Образование:</label><br />
-		<%= f.text_area  :education %>
-	</p>
+	<div class="col-xs-12">
+		<p>
+			<label>Доп.Образование:</label><br />
+			<%= f.text_area  :addeducation, id: "froala-editor"  %>
+		</p>
+	</div>
 
-	<p>
-		<label>Доп.Образование:</label><br />
-		<%= f.text_area  :addeducation %>
-	</p>
-
-	<p>
-		<label>Программы:</label><br />
-		<%= f.text_area  :programms %>
-	</p>
-
+	<div class="col-xs-12">
+		<p>
+			<label>Программы:</label><br />
+			<%= f.text_area  :programms, id: "froala-editor"  %>
+		</p>
+	</div>
+	<div>
 	<p>
 		<%= f.submit 'отправить' %>
 	</p>
+	</div>
+	
 
 <% end %>
+
+<!-- <script>
+  $(function() {
+    $('div#froala-editor1, textarea#froala-editor2').froalaEditor({
+      toolbarInline: true,
+      toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insertVideo', 'undo', 'redo']
+    })
+  });
+</script> -->
+ <script src='../../node_modules/froala-editor/languages/ru.js'></script>
+<script>
+  $(function() {
+    $('textarea#froala-editor').froalaEditor({
+    	language: 'ru',
+    	placeholderText: 'Start typing something...',
+    	tabSpaces: 4,
+    	
+    	pluginsEnabled: null,
+    	 heightMin: 100,
+      heightMax: 200
+	}
+	
+		
+	
+
+    )
+  });
+</script>
