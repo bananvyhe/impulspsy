@@ -13,14 +13,25 @@ class EmployeesController < ApplicationController
 
 	def show
 		@employee = Employee.find(params[:id])
+
 	end
 
 	def create
 		@employee = Employee.new(employee_params)
 		
 		if @employee.valid?
-			 
+			 spliter = @employee.name
+			s1 = spliter.split(/ /)
+			first = s1[0]
+			second = s1[1]
+			third = s1[2]
+
+			@employee.first =  first.mb_chars.capitalize.to_s
+			@employee.second =  second.mb_chars.capitalize.to_s
+			@employee.third =  third.mb_chars.capitalize.to_s
+			
 			@employee.save
+
 		else
 			render action: 'new'
 		end
@@ -28,6 +39,7 @@ class EmployeesController < ApplicationController
 
 	def edit
 		@employee = Employee.find(params[:id])
+
   	end
 
   	def update
