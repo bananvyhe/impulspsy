@@ -4,17 +4,16 @@
 <%= form_for @employee, :html => {:multipart => true} do |f| %>
 	<div class="col-xs-12 col-sm-6 col-md-6 ">
 		<div >
-		<% if @employee && @employee.errors.any? %>
-			<p>
-		        <ul>
+			<% if @employee && @employee.errors.any? %>
+				<p>
+			        <ul>
 
-				<% @employee.errors.full_messages.each do |msg| %>
-		          <li><%= msg %></li>
-		        <% end %>  
-
-		        </ul>
-			</p>
-		<% end %>
+					<% @employee.errors.full_messages.each do |msg| %>
+			          <li><%= msg %></li>
+			        <% end %>  
+					</ul>
+				</p>
+			<% end %>
 		</div>
 
   		<div  >
@@ -67,7 +66,7 @@
 			<%= f.text_area  :programms, id: "froala-editor"  %>
 		</p>
 	</div>
-	<div>
+	<div class="col-xs-12">
 	<p>
 		<%= f.submit 'отправить' %>
 	</p>
@@ -91,7 +90,7 @@
     	language: 'ru',
     	theme: 'gray',
     	zIndex: 2001,
-    	placeholderText: 'Start typing something...',
+    	placeholderText: 'Введите текст...',
     	tabSpaces: 4,
     	
     	pluginsEnabled: null,
@@ -101,8 +100,8 @@
       toolbarButtons: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline','formatOL', 'formatUL', 'outdent', 'indent'],
       toolbarButtonsMD: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline','formatOL', 'formatUL', 'outdent', 'indent'],
       toolbarButtonsSM: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline', 'outdent', 'indent','formatOL', 'formatUL'],
-      toolbarButtonsXS: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline', 'outdent', 'indent','formatOL', 'formatUL']
-      
+      toolbarButtonsXS: ['undo', 'redo' , '|', 'align',  'bold', 'italic', 'underline', 'outdent', 'indent','formatOL', 'formatUL'],
+        
 
 	}
 	

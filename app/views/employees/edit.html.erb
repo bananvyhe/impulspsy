@@ -4,17 +4,16 @@
 <%= form_for @employee, :html => {:multipart => true}, method: :put do |f| %>
 	<div class="col-xs-12 col-sm-6 col-md-6 ">
 		<div >
-		<% if @employee && @employee.errors.any? %>
-			<p>
-		        <ul>
+			<% if @employee && @employee.errors.any? %>
+				<p>
+			        <ul>
 
-				<% @employee.errors.full_messages.each do |msg| %>
-		          <li><%= msg %></li>
-		        <% end %>  
-
-		        </ul>
-			</p>
-		<% end %>
+					<% @employee.errors.full_messages.each do |msg| %>
+			          <li><%= msg %></li>
+			        <% end %>  
+					</ul>
+				</p>
+			<% end %>
 		</div>
 
   		<div  >
@@ -29,9 +28,7 @@
 	    <%= f.hidden_field :avatar_cache %> 
 	     </p>
 	    <% end %>
-	  
-	   
- 	 	</div>
+	  	</div>
 		
 		<div  >
 		<p>
@@ -74,7 +71,7 @@
 			<%= f.text_area  :programms, id: "froala-editor"  %>
 		</p>
 	</div>
-	<div>
+	<div class="col-xs-12"> 
 	<p>
 		<%= f.submit 'отправить' %>
 	</p>
