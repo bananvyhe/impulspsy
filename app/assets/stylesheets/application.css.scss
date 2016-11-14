@@ -26,7 +26,7 @@
 }
 
 .team-member-info{ text-align: left; 
-	padding:20px;
+	padding: 0px 0px;
 	position:absolute;
 	z-index:10;
 	margin-top:-89px;
@@ -60,6 +60,8 @@
 }	
 
 .team-member:hover .team-member-info{
+	padding: 6px 15px 0px 15px;
+	  
 	top:80px;
 }
 
@@ -75,20 +77,61 @@
 .team-member-info{  
 
 }
-
-.team-member-info h2{
-	margin:3px 0 0;
-}
+ 
 
 .team-member-info .job{
-
-	 border-top: 2px solid;
-	color:#95999e;
+	line-height: 1;
+padding: 3px 10px 0px 10px;
+	 border-top: 1px solid #919191;
+	color:#7e7e7e;
 	font-size:13px;
 	// display:block;
 	// margin-bottom:17px;
 	// white-space:nowrap;
 }
+
+
+
+.team-member-info .first{
+	padding: 6px 15px 0px 15px;
+	text-align: right; 
+	margin-top:0px;
+	
+	color:#266424;
+	font-size:14px;
+	// display:block;
+	// margin-bottom:17px;
+	// white-space:nowrap;
+}
+
+.team-member-info .second{
+	padding: 0px 15px 5px 15px;
+	margin-top: -5px;
+	text-align: right; 
+	  color:#727272;
+	
+	font-size:16px;
+	// display:block;
+	// margin-bottom:17px;
+	// white-space:nowrap;
+}
+
+ .ui_more{
+	 
+	  
+	 
+	text-align: right; 
+	  color:#727272;
+	
+	 
+	// display:block;
+	// margin-bottom:17px;
+	// white-space:nowrap;
+}
+  .buttonstyle{
+	margin: 0px 0px 5px 0px;
+}
+
 
 .team-member.big{
 	background:#fff;
