@@ -8,6 +8,8 @@ root to: "home#index"
 
   get 'terms' => 'pages#terms'
   get 'about' => 'pages#about'
+
+resources :sliders
 resources :libraries
 resources :costs
 resources :employees 

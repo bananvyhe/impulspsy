@@ -1,0 +1,5 @@
+<p>Слайд добавлен.</p> <p><a href="/sliders/new">Добавить еще?</a></li></p>
+
+<% @sliders.each do |slider| %>
+<%= image_tag slider.slide.url %>
+<% end %>

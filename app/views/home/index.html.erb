@@ -2,13 +2,11 @@
 		<div class="col-md-10">
 
 			<div id="owl-example" class="owl-carousel">
-			  <div> <img src="slider/1.jpg"> </div>
-			  <div> Your Content </div>
-			  <div> Your Content </div>
-			  <div> Your Content </div>
-			  <div> Your Content </div>
-			  <div> Your Content </div>
-			  <div> Your Content </div>
+				<% @sliders.each do |slider| %>
+
+			 	<div> <%= image_tag slider.slide.url %> </div>
+			 	
+			  <% end %>
  			</div>
 
 			<h2>What our customers are saying...</h2>

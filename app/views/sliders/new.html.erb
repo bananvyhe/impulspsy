@@ -1,0 +1,35 @@
+<h4>Добавить слайд:</h4>
+
+
+<%= form_for @slider, :html => {:multipart => true} do |f| %>
+	<div class="col-xs-6 col-sm-12 col-md-12 ">
+		<div >
+			<% if @slider && @slider.errors.any? %>
+				<p>
+			        <ul>
+
+					<% @slider.errors.full_messages.each do |msg| %>
+			          <li><%= msg %></li>
+			        <% end %>  
+					</ul>
+				</p>
+			<% end %>
+		</div>
+
+  		<div  >
+	 	<p>
+	    <label>Загрузите слайд:</label>
+	    <%= f.file_field :slide %>
+	    <%= f.hidden_field :slide_cache %> 
+	     
+	 	</p>
+ 	 	</div>
+
+ 	 	<div class="col-xs-12">
+	<p>
+		<%= f.submit 'отправить' %>
+	</p>
+	</div>
+ 	 </div>
+
+ <% end %>
