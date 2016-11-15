@@ -10,7 +10,7 @@ root to: "home#index"
   get 'about' => 'pages#about'
 resources :libraries
 resources :costs
-resources :employees
+resources :employees 
 resources :reviews
 resources :articles
 # resource :reviews, only: [:new, :create], path_names: {:new => ''}

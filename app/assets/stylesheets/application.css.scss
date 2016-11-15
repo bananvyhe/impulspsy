@@ -8,7 +8,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.fa {
+  
+  color: #266424;
+}
 
+ 
 /* Team Members */
 
 .team-member{ text-align: center;
@@ -49,7 +54,9 @@
 	margin-right:0;
 }
 
-.team-member-more{  text-align: left;
+.team-member-more{  
+	font-size:13px;
+	text-align: left;
 	transform: scale(0);
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
@@ -81,11 +88,12 @@
 
 .team-member-info .job{
 	line-height: 1;
-padding: 3px 10px 0px 10px;
+	padding: 3px 10px 0px 5px;
 	 border-top: 1px solid #919191;
 	color:#7e7e7e;
 	font-size:13px;
-	// display:block;
+	 
+	
 	// margin-bottom:17px;
 	// white-space:nowrap;
 }
@@ -111,6 +119,8 @@ padding: 3px 10px 0px 10px;
 	  color:#727272;
 	
 	font-size:16px;
+
+
 	// display:block;
 	// margin-bottom:17px;
 	// white-space:nowrap;
@@ -213,6 +223,8 @@ h4{
 	color: #602F8D;
 	text-decoration: underline;
 }
+
+
 
 /* Small devices (tablets, 768px and up) 
 

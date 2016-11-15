@@ -16,20 +16,35 @@
 									<div class="team-member-info">
 										 
 
-										<div class="first"><%= employee.first %></div>
-										<div class="second"><%= employee.second %> <%= employee.third %></div>
-										 
-										<div class="job"><i><%= employee.spec.html_safe %></i>
-											
+										<div class="first">
+											<%= employee.first %>
+										</div>
+
+										<div class="second">
+											<%= employee.second %> <%= employee.third %>
 										</div>
 										 
+										<div class="job">
+										<i><%= employee.spec.html_safe %></i>
+										</div>
+										  
 										<div class="team-member-more">
 											<%= employee.prof.html_safe %>
 										</div>
+
 										<div class="ui_more">
-											<button type="button" class="btn btn-default btn-xs buttonstyle"><%= link_to 'Подробнее', employee_path(employee) %></button><br />
-											<button type="button" class="btn btn-default btn-xs buttonstyle"><%= link_to 'Редактировать', edit_employee_path(employee) %></button> <br />
-											<button type="button" class="btn btn-default btn-xs buttonstyle"><%= link_to 'Удалить', employee_path(employee), method: :delete, data: { confirm: 'Вы уверены?'} %></button>
+											<button type="button" class="btn btn-default btn-xs buttonstyle">
+											<i class="fa fa-share" aria-hidden="true"></i> <%= link_to 'Подробнее', employee_path(employee) %>
+											</button><br />
+
+											<button type="button" class="btn btn-default btn-xs buttonstyle"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <%= link_to 'Редактировать', edit_employee_path(employee) %>
+											</button> <br />
+
+											<!-- <a class="btn btn-danger" href="#">
+  										<i class="fa fa-trash-o fa-lg"></i> Удалить</a> -->
+
+											<button type="button" class="btn btn-default btn-xs buttonstyle"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Удалить', employee_path(employee), method: :delete, data: { confirm: 'Вы уверены?'} %>
+											</button>
 										</div>	 
 										
 										

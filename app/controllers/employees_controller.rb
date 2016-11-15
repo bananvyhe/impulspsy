@@ -21,6 +21,7 @@ class EmployeesController < ApplicationController
 		
 		if @employee.valid?
 			 spliter = @employee.name
+			  
 			s1 = spliter.split(/ /)
 			first = s1[0]
 			second = s1[1]
@@ -29,7 +30,7 @@ class EmployeesController < ApplicationController
 			@employee.first =  first.mb_chars.capitalize.to_s
 			@employee.second =  second.mb_chars.capitalize.to_s
 			@employee.third =  third.mb_chars.capitalize.to_s
-			
+
 			@employee.save
 
 		else
