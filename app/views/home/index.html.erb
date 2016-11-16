@@ -4,7 +4,7 @@
 			<div class="row">
 
 			<div class="col-md-5">
-				<div  id="owl-origin" class="owl-carousel">
+				<div class="owl-carousel">
 					<% @sliders.each do |slider| %>
 						<div class="item">
 					 	<%= image_tag slider.slide.url %>
@@ -52,14 +52,20 @@
  
  <script> 
  document.addEventListener("turbolinks:load", function() {
-   $("#owl-origin").owlCarousel({
-
-   		slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true,
-       autoPlay : true,
-       pagination : false,
-       transitionStyle : "fade"
+   $('.owl-carousel').owlCarousel({
+			items:1,
+			lazyLoad:true,
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:2800,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn'
+   		// slideSpeed : 300,
+     //  paginationSpeed : 400,
+     //  singleItem:true,
+     //   autoPlay : true,
+     //   pagination : false,
+     //   transitionStyle : "fade"
    });
 })
 // $(document).on('ready page:load', function() {
