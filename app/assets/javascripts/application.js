@@ -11,13 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
+
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
 //
 //= require froala_editor.min.js
 //
 //= require languages/ru.js
 //= require plugins/lists.min.js
+//= require turbolinks
  
