@@ -10,6 +10,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
 .fa {
   
   color: #266424;
@@ -56,9 +58,11 @@
 	margin-right:0;
 }
 
-.team-member-more{  
+.team-member-more{ 
+	margin-top: -5px; 
 	font-size:13px;
 	text-align: left;
+	line-height: 1.0;
 	transform: scale(0);
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
@@ -129,7 +133,7 @@
 }
 
  .ui_more{
-	 
+	
 	  
 	 
 	text-align: right; 
@@ -141,7 +145,12 @@
 	// white-space:nowrap;
 }
   .buttonstyle{
+  	 
 	margin: 0px 0px 5px 0px;
+}
+.buttonstyle a{
+  	 text-decoration: none;
+	
 }
 
 
