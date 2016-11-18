@@ -31,11 +31,15 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :big do
-    process :resize_to_fit => [400, 600]
+    process :resize_to_fit => [nil, 600]
+    
   end
 
   version :medium do
-    process :resize_to_fit => [250, 380]
+    #process :resize_to_fit => [250, 380]
+    process :resize_to_fit => [nil, 280]
+    process crop: '260x280+0+0'
+    #process resize_and_crop: 250
   end
 
   version :thumb do
@@ -45,20 +49,41 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # merge "mask 'n' paint" images with a gray image,
   # to create a "lighting mask"
+
+  def crop(geometry)
+    manipulate! do |img|      
+      img.crop(geometry)
+      img
+    end    
+  end
+
+  def resize_and_crop(size)  
+    manipulate! do |image|                 
+      if image[:width] < image[:height]
+        remove = ((image[:height] - image[:width])/2).round 
+        image.shave("0x#{remove}") 
+      elsif image[:width] > image[:height] 
+        remove = ((image[:width] - image[:height])/2).round
+        image.shave("#{remove}x0")
+      end
+      image.resize("#{size}x#{size}")
+      image
+    end
+  end
+
   def make_thumb
      
     resize_to_fit(80,80)
      
-manipulate! do |image|
-    image.combine_options do |c|
+    manipulate! do |image|
+      image.combine_options do |c|
       c.mattecolor '#555555'  
       c.frame  '1x1' 
        
     end
-    
     image   
   end
-  end
+end
 
 
   
