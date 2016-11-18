@@ -11,7 +11,7 @@
 									<%= image_tag employee.avatar.medium.url, :class => "team-member-image hidden-xs hidden-sm"    %>
 									<%= image_tag employee.avatar.big.url, :class => "team-member-image hidden-md hidden-lg"    %>
 									
-									 
+									  
 									
 									<div class="team-member-info">
 										 
@@ -29,12 +29,19 @@
 										</div>
 										  
 										<div class="team-member-more">
-											<%= employee.prof.html_safe %>
+											<%= employee.prof.first(126).html_safe  %>
+											<%  if  employee.prof.size > 126%>
+											...</p>
+											<% end %>
+
+												
+											
+
 										</div>
 
 										<div class="ui_more">
-											<button type="button" class="btn btn-default btn-xs buttonstyle">
-											<i class="fa fa-share" aria-hidden="true"></i> <%= link_to 'Подробнее', employee_path(employee) %>
+											<button type="button" class="btn btn-default btn-md btn-block buttonstyle">
+											  <%= link_to 'Подробнее', employee_path(employee) %>
 											</button><br />
 
 											<button type="button" class="btn btn-default btn-xs buttonstyle"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <%= link_to 'Редактировать', edit_employee_path(employee) %>
