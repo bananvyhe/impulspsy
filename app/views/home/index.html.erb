@@ -1,10 +1,11 @@
 	
 	
-		<div class="col-md-12">
-			<div class="row">
+		 
+			<div class="col-md-13">
+			<div class="col-md-4 leftsheet">123</div>
 
 			<div class="col-md-5">
-				<div class="owl-carousel">
+				<div class="owl-carousel owl-theme owl-loaded">
 					<% @sliders.each do |slider| %>
 						<div class="item">
 					 	<%= image_tag slider.slide.url %>
@@ -12,16 +13,16 @@
 					 <% end %>
 		 		</div>
 			</div>
+			<div class="col-md-4 rightsheet">123</div>
 			</div>
 
-		</div>
-
+		 
  			
 
 
  	<div class="row">
 
- 		<div class="col-md-12">	
+ 		<div class="col-md-13">	
 
 			<h2>What our customers are saying...</h2>
 			<blockquote>
@@ -59,7 +60,8 @@
     autoplay:true,
     autoplayTimeout:2800,
     animateOut: 'fadeOut',
-    animateIn: 'fadeIn'
+     
+
    		// slideSpeed : 300,
      //  paginationSpeed : 400,
      //  singleItem:true,
