@@ -4,7 +4,8 @@
  *= require font-awesome
  *= require themes/gray.min.css
  *= require owl.carousel
-
+*= require plugins/image_manager.min.css
+ *= require plugins/image.min.css
  */
 
 @import "bootstrap-sprockets";

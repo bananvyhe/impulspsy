@@ -23,4 +23,5 @@
 //= require languages/ru.js
 //= require plugins/lists.min.js
 //= require turbolinks
- 
+ //= require plugins/image.min.js
+//= require plugins/image_manager.min.js
