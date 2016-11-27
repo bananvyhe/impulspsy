@@ -7,8 +7,12 @@
 	</div>
 
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<button type="button" class="btn btn-default btn-xs buttonstyle"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <%= link_to 'Редактировать', edit_slider_path(slider) %>
+		</button> <br />
+
 		<button type="button" class="btn btn-default btn-xs buttonstyle"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Удалить', slider_path(slider), method: :delete, data: { confirm: 'Вы уверены?'} %>
-		</button>
+		</button><br />
+		порядок показа: <%= slider.number %>
 	</div>
 
 </div>	

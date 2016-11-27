@@ -1,7 +1,8 @@
 class SlidersController < ApplicationController
 	def index
 		
-		@sliders = Slider.all
+		@sliders = Slider.order(:number) 
+
 
 	end
 
@@ -28,12 +29,12 @@ class SlidersController < ApplicationController
 	end
 
 	def edit
-		@slider = slider.find(params[:id])
+		@slider = Slider.find(params[:id])
 
   	end
 
   	def update
-		@slider = slider.find(params[:id])
+		@slider = Slider.find(params[:id])
 		if @slider.update(slider_params)
         redirect_to @slider
         else
@@ -51,6 +52,6 @@ class SlidersController < ApplicationController
 
 	private	
 		def slider_params
-			params.require(:slider).permit(:slide)
+			params.require(:slider).permit(:slide, :number, :title, :descriprion)
 		end
 end
