@@ -5,10 +5,12 @@
 			<div class="col-md-4 leftsheet">123</div>
 
 			<div class="col-md-5">
-				<div class="owl-carousel owl-theme owl-loaded">
+				<div class="owl-carousel owl-theme owl-loaded ">
 					<% @sliders.each do |slider| %>
-						<div class="item">
+						<div  class="item slideshow">
 					 	<%= image_tag slider.slide.url %>
+					 	<h3  class="txttitle"><%= slider.title %></h3>
+						<p class="txtslave"><%= slider.description %></p>
 					 	</div>
 					 <% end %>
 		 		</div>
@@ -51,28 +53,3 @@
 	</div>
 
  
- <script> 
- document.addEventListener("turbolinks:load", function() {
-   $('.owl-carousel').owlCarousel({
-			items:1,
-			lazyLoad:true,
-    loop:true,
-    autoplay:true,
-    autoplayTimeout:2800,
-    animateOut: 'fadeOut',
-     
-
-   		// slideSpeed : 300,
-     //  paginationSpeed : 400,
-     //  singleItem:true,
-     //   autoPlay : true,
-     //   pagination : false,
-     //   transitionStyle : "fade"
-   });
-})
-// $(document).on('ready page:load', function() {
- 
-//   $("#owl-example").owlCarousel();
- 
-// });
-</script>

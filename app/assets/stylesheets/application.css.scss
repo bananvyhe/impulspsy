@@ -4,8 +4,9 @@
  *= require font-awesome
  *= require themes/gray.min.css
  *= require owl.carousel
-*= require plugins/image_manager.min.css
+ *= require plugins/image_manager.min.css
  *= require plugins/image.min.css
+
  */
 
 @import "bootstrap-sprockets";
@@ -46,6 +47,53 @@
 //     float: left;
 //   }
 // }
+
+[class^="txt"], [class^="img"] {
+ 	position: absolute;
+ 	margin: 0;
+ 	
+
+ }
+
+body {
+  font-family: 'Roboto'
+}
+
+.slideshow {
+   
+  position: relative;
+ }
+
+ @-webkit-keyframes txttitle-on {
+	0% { left: -500px;}
+	100% {left: 400px;}
+}
+
+#sli {
+
+}
+ .txttitle { 
+ 	font-family: 'Poiret One', cursive;
+	 top: 37px;
+	 z-index: 400;
+	 text-transform: uppercase;
+	 font-size: 25px;
+	 left: -500px;
+	 //-webkit-animation: txttitle-on 1s forwards;
+
+
+
+ }
+
+ .txtslave {
+	font-family: 'Play', sans-serif; 
+	top: 70px;
+	left: 20px;
+ }
+
+
+
+
 .slidesetup{
 	height:150px;
 
