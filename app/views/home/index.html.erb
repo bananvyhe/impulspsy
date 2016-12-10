@@ -4,13 +4,24 @@
 			<div class="col-md-13">
 			<div class="col-md-4 leftsheet">123</div>
 
-			<div class="col-md-5">
+			<div class="col-md-5 ">
+				 
+				 
+				
 				<div class="owl-carousel owl-theme owl-loaded ">
 					<% @sliders.each do |slider| %>
-						<div  class="item slideshow">
+						<div  class="item windowslide">
 					 	<%= image_tag slider.slide.url %>
-					 	<h3  class="txttitle"><%= slider.title %></h3>
-						<p class="txtslave"><%= slider.description %></p>
+						 	<div class="flex-container">
+							 	  
+							 	<h3 class="txttitle"><%= slider.title %><br/> <span class="txtslave"><%= slider.description %> </span> </h3>
+							 	 
+							 	   
+							 	 
+							 	 
+						 	</div>
+					 	 
+						
 					 	</div>
 					 <% end %>
 		 		</div>

@@ -59,36 +59,88 @@ body {
   font-family: 'Roboto'
 }
 
-.slideshow {
+.flex-container {
+ 
+ text-align: right;
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+	flex-direction:column;
+	 justify-content:flex-end;
+	 align-items:flex-end;
+ 
+
+	  
+	 
+
+
    
-  position: relative;
+   
  }
 
  @-webkit-keyframes txttitle-on {
-	0% { left: -500px;}
+	0% { left: -100px;}
 	100% {left: 400px;}
 }
 
-#sli {
+  
 
+ .windowslide{
+ 	
+ }
+br {
+	line-height: 25px;
 }
+ 
+
  .txttitle { 
- 	font-family: 'Poiret One', cursive;
-	 top: 37px;
+ 	  
+ 	font-family: 'Roboto', cursive;
+	   
 	 z-index: 400;
 	 text-transform: uppercase;
-	 font-size: 25px;
-	 left: -500px;
+	 font-size: 16px;
+	 font-weight: bold;
+	     
+	  color: #fff ;
+	  
+	 text-shadow: 0px 2px 8px rgba(0,0,0,0.9),
+
+             0px 8px 13px rgba(0,0,0,0.4),
+
+             0px 18px 23px rgba(0,0,0,0.1);
+padding-right: 10%;
+padding-top: 4%;
+padding-bottom: 5%;
+ line-height:1.1;
+  width: 100%;
+
+
+	  
+
 	 //-webkit-animation: txttitle-on 1s forwards;
 
 
 
  }
 
- .txtslave {
-	font-family: 'Play', sans-serif; 
-	top: 70px;
-	left: 20px;
+  
+
+ .txtslave {  position: relative;
+	 
+	   
+	 
+	 font-size: 14px;
+	 font-weight: normal;
+	 text-transform:none;
+	 text-shadow: 0px 1px 3px rgba(0,0,0,0.9),
+
+             0px 2px 5px rgba(0,0,0,0.7),
+
+             0px 4px 8px rgba(0,0,0,0.5);
+	 
  }
 
 

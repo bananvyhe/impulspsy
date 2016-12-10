@@ -14,48 +14,22 @@
 </head>
 <script> 
  document.addEventListener("turbolinks:load", function() {
+ 	 
    $('.owl-carousel').owlCarousel({
 		items:1,
 		lazyLoad:true,
 	    loop:true,
 	    autoplay:true,
-	    autoplayTimeout:2800,
+	    autoplayTimeout:4800,
 	    animateOut: 'fadeOut',
 	     
 
    });
 
-   var owl = $('.owl-carousel');
-	owl.owlCarousel();
-	// Listen to owl events:
-	owl.on('changed.owl.carousel', function(event) {
-		var element = jQuery('h3');
-		element.removeClass("txttitle");
-		element.width();// Force reflow
-		element.addClass("txttitle");
-     
-	})
+   
 
-
-  //  function callback(){
-  //        
-  //  		$('.txttitle').focus (function() {   
-
-  //         var el = $(this),
-  //         newone = el.clone(true);
-
-  //         el.before(newone);
-
-  //         $("." + el.attr("class") + ":last").remove();
-
-		// });
-  //    }
 })
-// $(document).on('ready page:load', function() {
- 
-//   $("#owl-example").owlCarousel();
- 
-// });
+
 </script>
 
 <body>
