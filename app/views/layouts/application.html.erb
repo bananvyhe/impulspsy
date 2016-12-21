@@ -14,19 +14,72 @@
 </head>
 <script> 
  document.addEventListener("turbolinks:load", function() {
- 	 
+	var owl = $('.owl-carousel');
+	owl.on('initialize.owl.carousel', function(event) {
+
+		var element = jQuery('h3');
+		element.removeClass("animated fadeInn fadeOut").addClass('fadeInnn');
+
+	});
+
+
+	owl.on('initialized.owl.carousel', function(event) {
+	 
+
+		setTimeout(function(){
+   			var element = jQuery('h3');
+   			element.addClass("animated fadeInn");
+		}, 1000);
+
+		setTimeout(function(){
+   			var element = jQuery('h3');
+   			element.addClass("animated fadeOut");
+		}, 7800);
+	});
+
+
+
+
    $('.owl-carousel').owlCarousel({
 		items:1,
 		lazyLoad:true,
 	    loop:true,
 	    autoplay:true,
-	    autoplayTimeout:4800,
+	    autoplayTimeout:9800,
+
 	    animateOut: 'fadeOut',
-	     
+	});
 
-   });
+	var owl = $('.owl-carousel');
+	owl.owlCarousel({
+		 
+	});
 
-   
+	// Listen to owl events:
+	
+
+
+	 owl.on('changed.owl.carousel', function(event) {
+
+	 	var element = jQuery('h3');
+		element.removeClass("animated fadeInn fadeOut").addClass('fadeInnn');
+
+		element.width();
+
+		setTimeout(function(){
+   			var element = jQuery('h3');
+   			element.addClass("animated fadeInn");
+		}, 1800);
+		});
+
+		owl.on('change.owl.carousel', function(event) {
+
+		setTimeout(function(){
+   			var element = jQuery('h3');
+   			element.addClass("animated fadeOut");
+		}, 11000);
+
+		});
 
 })
 
