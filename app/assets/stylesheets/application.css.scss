@@ -48,6 +48,12 @@
 //   }
 // }
 
+
+
+
+ 
+
+
 .animated {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
@@ -266,12 +272,65 @@ padding-bottom: 5%;
 
 }
 
-.leftsheet{
-	background-color: #656565
+.leftsheet{ 
+	
+}
+
+
+
+
+
+.leftsheet dl{   text-align: right;  
+	 
+	list-style: none;
+	 dd{ 
+     
+     
+    font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+    font-weight: 100;
+    width: auto;
+     
+  
+     
+   
+  }
 }
 
 .rightsheet{
-	background-color: #656565
+	 
+}
+
+
+.rightsheet dl{   text-align: left;  
+	 
+	list-style: none;
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	
+	 dt{ 
+	
+    color: white;
+    background: #3C7EFD;
+    font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+    font-weight: 100;
+    width: auto;
+    display: inline-block	;
+    margin: 0 0 2px 0;
+	padding: 3px 10px;
+	
+	
+
+    border-radius: 5px 5px 5px 5px;
+  
+     
+  
+     
+  }
 }
 
 .fa {
